@@ -1,0 +1,1297 @@
+[
+    {
+        "name": "tamarindo",
+        "icon": "crops-tamarindo",
+        "color": "#e64d00",
+        "abundance": [
+            2,
+            3,
+            4,
+            5
+        ],
+        "beginOrProduction": [
+            1,
+            6
+        ],
+        "noProduction": [
+            0,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "tangelo",
+        "icon": "crops-tangelo",
+        "color": "#FF851B",
+        "abundance": [
+            0
+        ],
+        "beginOrProduction": [
+            1,
+            11
+        ],
+        "noProduction": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "parcha",
+        "icon": "crops-parcha",
+        "color": "#FFDC00",
+        "abundance": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "beginOrProduction": [
+            3,
+            10
+        ],
+        "noProduction": [
+            0,
+            1,
+            2,
+            3,
+            11
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "níspero",
+        "icon": "crops-nispero",
+        "color": "#FFDC00",
+        "abundance": [
+            6,
+            7,
+            8,
+            9
+        ],
+        "beginOrProduction": [
+            5,
+            10
+        ],
+        "noProduction": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            11
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "pana de pepita",
+        "icon": "crops-pana-de-pepita",
+        "color": "#2ECC40",
+        "abundance": [
+            4,
+            5,
+            9
+        ],
+        "beginOrProduction": [
+            3,
+            6,
+            8,
+            10,
+            11
+        ],
+        "noProduction": [
+            0,
+            1,
+            2,
+            7
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "gandur",
+        "icon": "crops-gandur",
+        "color": "#2ECC40",
+        "abundance": [
+            0,
+            1,
+            11
+        ],
+        "beginOrProduction": [
+            2
+        ],
+        "noProduction": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "quenepa",
+        "icon": "crops-quenepa",
+        "color": "#3D9970",
+        "abundance": [
+            6,
+            7
+        ],
+        "beginOrProduction": [
+            5,
+            8
+        ],
+        "noProduction": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            9,
+            10,
+            11
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "toronja",
+        "icon": "crops-toronja",
+        "color": "#FFDC00",
+        "abundance": [
+            0,
+            1,
+            10,
+            11
+        ],
+        "beginOrProduction": [
+            2,
+            9
+        ],
+        "noProduction": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "maíz para guisar",
+        "icon": "crops-maiz-guisar",
+        "color": "#FFDC00",
+        "abundance": [
+            3,
+            4
+        ],
+        "beginOrProduction": [
+            2,
+            5
+        ],
+        "noProduction": [
+            0,
+            1,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "mandarina encore",
+        "icon": "crops-mandarina-encore",
+        "color": "#FF851B",
+        "abundance": [
+            1
+        ],
+        "beginOrProduction": [
+            0,
+            2
+        ],
+        "noProduction": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "lima",
+        "icon": "crops-lima",
+        "color": "#FFDC00",
+        "abundance": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            11
+        ],
+        "beginOrProduction": [
+            7,
+            8,
+            9,
+            10
+        ],
+        "noProduction": [],
+        "type": "seed"
+    },
+    {
+        "name": "pimiento",
+        "icon": "crops-pimiento",
+        "color": "#FF4136",
+        "abundance": [
+            0,
+            1,
+            10,
+            11
+        ],
+        "beginOrProduction": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "noProduction": [],
+        "type": "seed"
+    },
+    {
+        "name": "mangó",
+        "icon": "crops-mango",
+        "color": "#cc4400",
+        "abundance": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "beginOrProduction": [
+            3,
+            10
+        ],
+        "noProduction": [
+            0,
+            1,
+            2,
+            11
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "malanga",
+        "icon": "crops-malanga",
+        "color": "#663300",
+        "abundance": [
+            7,
+            8,
+            9,
+            10
+        ],
+        "beginOrProduction": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            11
+        ],
+        "noProduction": [],
+        "type": "root"
+    },
+    {
+        "name": "mamey",
+        "icon": "crops-mamey",
+        "color": "#996633",
+        "abundance": [
+            3,
+            4,
+            5,
+            6,
+            7
+        ],
+        "beginOrProduction": [
+            2,
+            8
+        ],
+        "noProduction": [
+            0,
+            1,
+            9,
+            10,
+            11
+        ],
+        "type": "root"
+    },
+    {
+        "name": "recao hoja ancha",
+        "icon": "crops-recao",
+        "color": "#2ECC40",
+        "abundance": [
+            0,
+            1,
+            2,
+            10,
+            11
+        ],
+        "beginOrProduction": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "noProduction": [],
+        "type": "leaf"
+    },
+    {
+        "name": "apio",
+        "icon": "crops-apio",
+        "color": "#2ECC40",
+        "abundance": [
+            3,
+            4,
+            8,
+            9
+        ],
+        "beginOrProduction": [
+            10,
+            2,
+            5,
+            7
+        ],
+        "noProduction": [
+            0,
+            1,
+            5,
+            11
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "melón de agua",
+        "icon": "crops-melon-de-agua",
+        "color": "#2ECC40",
+        "abundance": [
+            5,
+            6
+        ],
+        "beginOrProduction": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "noProduction": [],
+        "type": "flower"
+    },
+    {
+        "name": "berenjena",
+        "icon": "crops-berenjena",
+        "color": "#85144b",
+        "abundance": [
+            0,
+            1,
+            2,
+            11
+        ],
+        "beginOrProduction": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "noProduction": [],
+        "type": "seed"
+    },
+    {
+        "name": "mamey sapote",
+        "icon": "crops-mamey-sapote",
+        "color": "#996633",
+        "abundance": [
+            2,
+            3,
+            4,
+            5
+        ],
+        "beginOrProduction": [
+            1,
+            6
+        ],
+        "noProduction": [
+            0,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "type": "root"
+    },
+    {
+        "name": "maíz dulce",
+        "icon": "crops-maiz-dulce",
+        "color": "#FFDC00",
+        "abundance": [
+            0,
+            11
+        ],
+        "beginOrProduction": [
+            1,
+            10
+        ],
+        "noProduction": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "pepinillo",
+        "icon": "crops-pepinillo",
+        "color": "#3D9970",
+        "abundance": [
+            0,
+            1,
+            11
+        ],
+        "beginOrProduction": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "noProduction": [],
+        "type": "seed"
+    },
+    {
+        "name": "batata",
+        "icon": "crops-batata",
+        "color": "#FF851B",
+        "abundance": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "beginOrProduction": [
+            0,
+            11
+        ],
+        "noProduction": [],
+        "type": "root"
+    },
+    {
+        "name": "ají dulce",
+        "icon": "crops-aji-dulce",
+        "color": "#FF4136",
+        "abundance": [
+            0,
+            1,
+            11
+        ],
+        "beginOrProduction": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "noProduction": [],
+        "type": "seed"
+    },
+    {
+        "name": "corazón",
+        "icon": "crops-corazon",
+        "color": "#FF4136",
+        "abundance": [
+            2,
+            3,
+            4,
+            5
+        ],
+        "beginOrProduction": [
+            1,
+            6
+        ],
+        "noProduction": [
+            0,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "chironja",
+        "icon": "crops-chironja",
+        "color": "#FFDC00",
+        "abundance": [
+            0,
+            1,
+            10,
+            11
+        ],
+        "beginOrProduction": [
+            2,
+            9
+        ],
+        "noProduction": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "china nativa",
+        "icon": "crops-china-nativa",
+        "color": "#FF851B",
+        "abundance": [
+            0,
+            1,
+            2,
+            11
+        ],
+        "beginOrProduction": [
+            3,
+            10
+        ],
+        "noProduction": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "mandarina dancy",
+        "icon": "crops-mandarina-dancy",
+        "color": "#FF851B",
+        "abundance": [
+            0,
+            11
+        ],
+        "beginOrProduction": [
+            1,
+            10
+        ],
+        "noProduction": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "cebolla",
+        "icon": "crops-cebolla",
+        "color": "#111111",
+        "abundance": [
+            0,
+            1,
+            2
+        ],
+        "beginOrProduction": [
+            3,
+            11
+        ],
+        "noProduction": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "type": "root"
+    },
+    {
+        "name": "china valencia",
+        "icon": "crops-china-valencia",
+        "color": "#FF851B",
+        "abundance": [
+            4,
+            5
+        ],
+        "beginOrProduction": [
+            3,
+            6
+        ],
+        "noProduction": [
+            0,
+            1,
+            2,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "habichuela verde",
+        "icon": "crops-habichuela-verde",
+        "color": "#3D9970",
+        "abundance": [
+            0,
+            11
+        ],
+        "beginOrProduction": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "noProduction": [],
+        "type": "seed"
+    },
+    {
+        "name": "carambola",
+        "icon": "crops-carambola",
+        "color": "#FFDC00",
+        "abundance": [
+            3,
+            4,
+            5,
+            6
+        ],
+        "beginOrProduction": [
+            2,
+            7,
+            8,
+            9
+        ],
+        "noProduction": [
+            0,
+            1,
+            10,
+            11
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "china nebo",
+        "icon": "crops-china-nebo",
+        "color": "#FF851B",
+        "abundance": [
+            10,
+            11
+        ],
+        "beginOrProduction": [
+            0,
+            8,
+            9
+        ],
+        "noProduction": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "acerola",
+        "icon": "crops-acerola",
+        "color": "#FF4136",
+        "abundance": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "beginOrProduction": [
+            0,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "noProduction": [],
+        "type": "seed"
+    },
+    {
+        "name": "calabaza",
+        "icon": "crops-calabaza",
+        "color": "#FF851B",
+        "abundance": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            11
+        ],
+        "beginOrProduction": [
+            2,
+            10
+        ],
+        "noProduction": [],
+        "type": "seed"
+    },
+    {
+        "name": "aguacate",
+        "icon": "crops-aguacate",
+        "color": "#3D9970",
+        "abundance": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "beginOrProduction": [
+            0,
+            1,
+            5
+        ],
+        "noProduction": [
+            2,
+            3,
+            4
+        ],
+        "type": "root"
+    },
+    {
+        "name": "chayote",
+        "icon": "crops-chayote",
+        "color": "#01FF70",
+        "abundance": [
+            4,
+            5,
+            6,
+            7
+        ],
+        "beginOrProduction": [
+            3,
+            8
+        ],
+        "noProduction": [
+            0,
+            1,
+            2,
+            9,
+            10,
+            11
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "coco",
+        "icon": "crops-coco",
+        "color": "#663300",
+        "abundance": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+        ],
+        "beginOrProduction": [
+            0,
+            8,
+            9,
+            10,
+            11
+        ],
+        "noProduction": [],
+        "type": "seed"
+    },
+    {
+        "name": "repollo",
+        "icon": "crops-repollo",
+        "color": "#01FF70",
+        "abundance": [
+            2,
+            3
+        ],
+        "beginOrProduction": [
+            1,
+            4
+        ],
+        "noProduction": [
+            0,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "type": "leaf"
+    },
+    {
+        "name": "guineo",
+        "icon": "crops-guineo",
+        "color": "#FFDC00",
+        "abundance": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "beginOrProduction": [
+            0,
+            10,
+            11
+        ],
+        "noProduction": [],
+        "type": "seed"
+    },
+    {
+        "name": "cilantrillo",
+        "icon": "crops-cilantrillo",
+        "color": "#2ECC40",
+        "abundance": [
+            0,
+            1,
+            2,
+            10,
+            11
+        ],
+        "beginOrProduction": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "noProduction": [],
+        "type": "leaf"
+    },
+    {
+        "name": "panapén",
+        "icon": "crops-panapen",
+        "color": "#2ECC40",
+        "abundance": [
+            5,
+            6,
+            7
+        ],
+        "beginOrProduction": [
+            4,
+            8
+        ],
+        "noProduction": [
+            0,
+            1,
+            2,
+            3,
+            9,
+            10,
+            11
+        ],
+        "type": "root"
+    },
+    {
+        "name": "guanábana",
+        "icon": "crops-guanabana",
+        "color": "#01FF70",
+        "abundance": [
+            2,
+            3,
+            7,
+            8
+        ],
+        "beginOrProduction": [
+            1,
+            4,
+            6,
+            9,
+            10
+        ],
+        "noProduction": [
+            0,
+            5,
+            11
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "plátano",
+        "icon": "crops-platano",
+        "color": "#FFDC00",
+        "abundance": [
+            4,
+            5,
+            6,
+            7
+        ],
+        "beginOrProduction": [
+            0,
+            1,
+            2,
+            3,
+            8,
+            9,
+            10,
+            11
+        ],
+        "noProduction": [],
+        "type": "seed"
+    },
+    {
+        "name": "limón",
+        "icon": "crops-limon",
+        "color": "#FFDC00",
+        "abundance": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            11
+        ],
+        "beginOrProduction": [
+            7,
+            8,
+            9,
+            10
+        ],
+        "noProduction": [],
+        "type": "seed"
+    },
+    {
+        "name": "lechuga",
+        "icon": "crops-lechuga",
+        "color": "#2ECC40",
+        "abundance": [
+            0,
+            1,
+            2,
+            3,
+            10,
+            11
+        ],
+        "beginOrProduction": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "noProduction": [],
+        "type": "leaf"
+    },
+    {
+        "name": "yautía morada",
+        "icon": "crops-yautia-morada",
+        "color": "#802b00",
+        "abundance": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "beginOrProduction": [
+            0,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "noProduction": [],
+        "type": "root"
+    },
+    {
+        "name": "habichuela tierna",
+        "icon": "crops-habichuela-tierna",
+        "color": "#3D9970",
+        "abundance": [
+            0,
+            11
+        ],
+        "beginOrProduction": [
+            1,
+            10
+        ],
+        "noProduction": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "pimiento morron",
+        "icon": "crops-pimiento-morron",
+        "color": "#FFDC00",
+        "abundance": [
+            0,
+            10,
+            11
+        ],
+        "beginOrProduction": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "noProduction": [],
+        "type": "seed"
+    },
+    {
+        "name": "piña",
+        "icon": "crops-pina",
+        "color": "#FFDC00",
+        "abundance": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "beginOrProduction": [
+            0,
+            1,
+            11
+        ],
+        "noProduction": [],
+        "type": "root"
+    },
+    {
+        "name": "yautía blanca",
+        "icon": "crops-yautia-blanca",
+        "color": "#802b00",
+        "abundance": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "beginOrProduction": [
+            4,
+            11
+        ],
+        "noProduction": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "type": "root"
+    },
+    {
+        "name": "tomate",
+        "icon": "crops-tomate",
+        "color": "#FF4136",
+        "abundance": [
+            0,
+            1,
+            2,
+            11
+        ],
+        "beginOrProduction": [
+            3,
+            10
+        ],
+        "noProduction": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "type": "seed"
+    },
+    {
+        "name": "quirimbombó",
+        "icon": "crops-quirimbombo",
+        "color": "#3D9970",
+        "abundance": [
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "beginOrProduction": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            11
+        ],
+        "noProduction": [],
+        "type": "flower"
+    },
+    {
+        "name": "papaya",
+        "icon": "crops-papaya",
+        "color": "#FFDC00",
+        "abundance": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "beginOrProduction": [
+            0,
+            11
+        ],
+        "noProduction": [],
+        "type": "seed"
+    },
+    {
+        "name": "yuca",
+        "icon": "crops-yuca",
+        "color": "#b33c00",
+        "abundance": [
+            0,
+            1,
+            11
+        ],
+        "beginOrProduction": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "noProduction": [],
+        "type": "root"
+    }
+]

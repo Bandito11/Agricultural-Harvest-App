@@ -1,0 +1,7 @@
+{
+  "name": "anemone",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
