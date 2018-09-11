@@ -98,8 +98,8 @@ export class CropsService {
   getFilteredCrops(opts: { crops: ICrop[], month: number, prop: string }) {
     let crops = [];
     opts.crops.map(crop => {
-      crop[opts.prop].map((abundantMonth) => {
-        if (abundantMonth === opts.month) {
+      crop[opts.prop].map(month => {
+        if (month === opts.month) {
           crops = [
             ...crops,
             {
