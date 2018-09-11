@@ -22,3 +22,11 @@ export function getUTCTime(utc) {
     const correctedDate = `${utcDate} ${civTime}`;
     return correctedDate;
 }
+
+export function getFromFile(path) {
+    return fetch(path).then(res => {
+      if (res.text) {
+        return res.text();
+      }
+    });
+  }
