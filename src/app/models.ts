@@ -41,3 +41,10 @@ export interface ITips {
     phase: string;
     message: string;
 }
+
+export interface ICalendar {
+    weekDay?: number;
+    day: number;
+    month: number;
+    year: number;
+}
