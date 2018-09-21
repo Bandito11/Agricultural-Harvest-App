@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ITips, IApiResponse } from './models';
-import { getFromFile } from './common';
+import { getFileFromAssets } from './common';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class TipsService {
       dateStamp: new Date()
     };
     return new Promise((resolve, reject) => {
-      getFromFile('./assets/tips/tips.json')
+      getFileFromAssets('./assets/tips/tips.json')
         .then(data => {
           const tips = <ITips[]>JSON.parse(data);
           try {

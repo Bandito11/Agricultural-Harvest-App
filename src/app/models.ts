@@ -30,7 +30,7 @@ export interface ICrop {
     icon: string;
     color: string;
     abundance: number[];
-    beginOrProduction: number[];
+    production: number[];
     noProduction: number[];
     interface: string;
     type: string;

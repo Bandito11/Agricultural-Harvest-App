@@ -23,10 +23,16 @@ export function getUTCTime(utc) {
     return correctedDate;
 }
 
-export function getFromFile(path) {
+export function getFileFromAssets(path) {
     return fetch(path).then(res => {
-      if (res.text) {
-        return res.text();
-      }
+        if (res.text) {
+            return res.text();
+        }
     });
-  }
+}
+
+export enum cropsAction {
+    abundance = 'abundance',
+    production = 'production',
+    noProduction = 'noProduction'
+}

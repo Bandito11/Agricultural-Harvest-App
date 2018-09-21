@@ -7,7 +7,46 @@
 </ion-header> -->
 
 <ion-content padding>
-    <p>{{cropsData.name}}</p>
- <i class="{{cropsData.icon}}" [style.color]="cropsData.color"></i>
- <p>{{tipsData.message}}<p>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Cosecha en abundancia</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list *ngFor="let crop of abundantCrops; let i=index">
+        <ion-item>
+          <i [style.color]="abundantCrops[i].color" class="{{crop.icon}}"></i>
+          <ion-label>{{crop.name}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Es bueno sembrar...</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list *ngFor="let crop of productionCrops; let i=index">
+        <ion-item>
+          <i [style.color]="productionCrops[i].color" class="{{crop.icon}}"></i>
+          <ion-label>{{crop.name}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>No es recomendable sembrar...</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list *ngFor="let crop of noProductionCrops; let i=index">
+        <ion-item>
+          <i [style.color]="noProductionCrops[i].color" class="{{crop.icon}}"></i>
+          <ion-label>{{crop.name}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

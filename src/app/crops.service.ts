@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ICrop, IApiResponse } from './models';
-import { getFromFile } from './common';
+import { getFileFromAssets } from './common';
 
 @Injectable({
   providedIn: 'root'
@@ -19,10 +19,10 @@ export class CropsService {
     };
     const errorMsg = 'No hay vegetales en la lista para este mes';
     return new Promise((resolve, reject) => {
-      getFromFile('./assets/crops/crops.json')
+      getFileFromAssets('./assets/crops/crops.json')
         .then(data => {
           crops = <ICrop[]>JSON.parse(data);
-          switch (opts.action.toLowerCase()) {
+          switch (opts.action) {
             case 'abundance':
               const abundantCrops = this.getFilteredCrops({ prop: opts.action, crops: crops, month: opts.month });
               if (abundantCrops.length > 0) {
@@ -38,13 +38,13 @@ export class CropsService {
                 };
               }
               break;
-            case 'beginorproduction':
+            case 'production':
               const beginCrops = this.getFilteredCrops({ prop: opts.action, crops: crops, month: opts.month });
               if (beginCrops.length > 0) {
                 response = {
                   ...response,
                   success: true,
-                  data: { ...response.data, ...beginCrops }
+                  data: [...response.data, ...beginCrops]
                 };
               } else {
                 response = {
@@ -53,13 +53,13 @@ export class CropsService {
                 };
               }
               break;
-            case 'noproduction':
+            case 'noProduction':
               const noProductionCrops = this.getFilteredCrops({ prop: opts.action, crops: crops, month: opts.month });
               if (noProductionCrops.length > 0) {
                 response = {
                   ...response,
                   success: true,
-                  data: { ...response.data, ...noProductionCrops }
+                  data: [...response.data, ...noProductionCrops]
                 };
               } else {
                 response = {
