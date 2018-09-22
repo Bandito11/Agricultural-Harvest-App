@@ -1,3 +1,4 @@
+import { WeatherService } from './../weather.service';
 import { cropsAction } from './../common';
 import { TipsService } from './../tips.service';
 import { CropsService } from './../crops.service';
@@ -15,7 +16,7 @@ export class HomePage implements OnInit {
   abundantCrops: ICrop[] = [];
   productionCrops: ICrop[];
   noProductionCrops: ICrop[];
-  constructor(private crops: CropsService, private tips: TipsService) { }
+  constructor(private weather: WeatherService, private crops: CropsService, private tips: TipsService) { }
 
   ngOnInit() {
     const currentDate: ICalendar = {
