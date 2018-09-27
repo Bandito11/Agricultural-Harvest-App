@@ -1,9 +1,9 @@
-import { WeatherService } from './../weather.service';
+import { WeatherService } from '../weather.service/weather.service';
 import { cropsAction } from './../common';
-import { TipsService } from './../tips.service';
-import { CropsService } from './../crops.service';
+import { CropsService } from '../crops.service/crops.service';
 import { Component, OnInit } from '@angular/core';
-import { ICrop, ICalendar } from '../models';
+import { ICrop, ICalendar, ICurrentWeather, IForecast } from '../models';
+import { TipsService } from '../tips.service/tips.service';
 
 @Component({
   selector: 'app-home',
@@ -13,10 +13,8 @@ import { ICrop, ICalendar } from '../models';
 export class HomePage implements OnInit {
   zodiacName: string;
   zodiacImage: string;
-  abundantCrops: ICrop[] = [];
-  productionCrops: ICrop[];
-  noProductionCrops: ICrop[];
-  constructor(private weather: WeatherService, private crops: CropsService, private tips: TipsService) { }
+
+  constructor() { }
 
   ngOnInit() {
     const currentDate: ICalendar = {
@@ -25,42 +23,7 @@ export class HomePage implements OnInit {
       year: new Date().getFullYear(),
       weekday: new Date().getDay()
     };
-    this.abundantCrops = [];
-    this.productionCrops = [];
-    this.noProductionCrops = [];
-    this.getCrops(currentDate.month);
     this.setZodiac(currentDate);
-  }
-
-  /**
-   * Generate arrays of crops queried by actions.
-   * @param month
-   */
-  getCrops(month: number) {
-    this.crops.getCrops({ month: month, action: cropsAction.abundance })
-      .then(res => {
-        if (res.success) {
-          this.abundantCrops = [...res.data];
-        } else {
-          this.handleError(res.error);
-        }
-      });
-    this.crops.getCrops({ month: month, action: cropsAction.production })
-      .then(res => {
-        if (res.success) {
-          this.productionCrops = [...res.data];
-        } else {
-          this.handleError(res.error);
-        }
-      });
-    this.crops.getCrops({ month: month, action: cropsAction.noProduction })
-      .then(res => {
-        if (res.success) {
-          this.noProductionCrops = [...res.data];
-        } else {
-          this.handleError(res.error);
-        }
-      });
   }
 
   setZodiac(date: ICalendar) {
@@ -176,9 +139,5 @@ export class HomePage implements OnInit {
       default:
         this.zodiacImage = '#';
     }
-  }
-
-  handleError(error) {
-    console.error(error);
   }
 }

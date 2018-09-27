@@ -1,0 +1,14 @@
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>No es recomendable sembrar...</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list *ngFor="let crop of noProductionCrops; let i=index">
+        <ion-item>
+          <i [style.color]="noProductionCrops[i].color" class="{{crop.icon}}"></i>
+          <ion-label>{{crop.name}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>

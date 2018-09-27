@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ITips, IApiResponse } from './models';
-import { getFileFromAssets } from './common';
+import { ITips, IApiResponse } from '../models';
+import { getFileFromAssets } from '../common';
 
 @Injectable({
   providedIn: 'root'

@@ -5,6 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { CropsAbundanceComponent } from '../crops-abundance/crops-abundance.component';
+import { CropsRecommendedComponent } from '../crops-recommended/crops-recommended.component';
+import { CropsNoproductionComponent } from '../crops-noproduction/crops-noproduction.component';
+import { WeatherComponent } from '../weather/weather.component';
 
 @NgModule({
   imports: [
@@ -18,6 +22,6 @@ import { HomePage } from './home.page';
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, WeatherComponent, CropsAbundanceComponent, CropsRecommendedComponent, CropsNoproductionComponent]
 })
 export class HomePageModule {}
