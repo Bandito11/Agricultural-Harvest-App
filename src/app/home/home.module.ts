@@ -9,6 +9,8 @@ import { CropsAbundanceComponent } from '../crops-abundance/crops-abundance.comp
 import { CropsRecommendedComponent } from '../crops-recommended/crops-recommended.component';
 import { CropsNoproductionComponent } from '../crops-noproduction/crops-noproduction.component';
 import { WeatherComponent } from '../weather/weather.component';
+import { TipsComponent } from '../tips/tips.component';
+import { ZodiacComponent } from '../zodiac/zodiac.component';
 
 @NgModule({
   imports: [
@@ -22,6 +24,7 @@ import { WeatherComponent } from '../weather/weather.component';
       }
     ])
   ],
-  declarations: [HomePage, WeatherComponent, CropsAbundanceComponent, CropsRecommendedComponent, CropsNoproductionComponent]
+  declarations: [HomePage, WeatherComponent, ZodiacComponent, CropsAbundanceComponent, CropsRecommendedComponent, 
+    CropsNoproductionComponent, TipsComponent]
 })
 export class HomePageModule {}

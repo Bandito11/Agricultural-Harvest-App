@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ITips, IApiResponse } from '../models';
+import {  IApiResponse, ITips } from '../models';
+import { HttpClient } from '@angular/common/http';
 import { getFileFromAssets } from '../common';
 
 @Injectable({
@@ -7,10 +8,17 @@ import { getFileFromAssets } from '../common';
 })
 export class TipsService {
 
-  constructor() { }
+  host = `http://localhost:5000/tips`;
 
-  getTips(opts: { zodiac: string, phase: string, message?: string }): Promise<IApiResponse<Partial<ITips>[]>> {
-    let response: IApiResponse<Partial<ITips>[]> = {
+  constructor(private httpClient: HttpClient) { }
+
+  /**
+  * Get tips based on zodiac and moonphase
+  * @param opts {zodiac:string, phase:string}
+  * From local file
+  */
+  getTips(opts: { zodiac: string, phase: string }): Promise<IApiResponse<string[]>> {
+    let response: IApiResponse<string[]> = {
       success: false,
       error: null,
       data: [],
@@ -25,7 +33,7 @@ export class TipsService {
               if (tip.zodiac === opts.zodiac && tip.phase === opts.phase) {
                 response = {
                   ...response,
-                  data: [...response.data, { message: tip.message }]
+                  data: [...response.data, tip.message]
                 };
               }
             });
@@ -44,7 +52,7 @@ export class TipsService {
           } else {
             response = {
               ...response,
-              error: 'No hay valor disponible.'
+              error: 'No hay recomendaciones disponible para este signo zodiacal y/o fase lunar.'
             };
           }
           resolve(response);
@@ -58,4 +66,35 @@ export class TipsService {
         });
     });
   }
+
+  /**
+ * Get tips based on zodiac and moonphase
+ * @param opts {zodiac:string, phase:string}
+ * From Web Api
+ */
+  // getTips(opts: { zodiac: string, phase: string }) {
+  //   const options = { params: opts };
+  //   return this.httpClient.get<IApiResponse<string[]>>(this.host, options)
+  //     .pipe(
+  //       retry(3),
+  //       catchError(this.handleError)
+  //     );
+  // }
+
+  // private handleError(error: HttpErrorResponse) {
+  //   if (error.error instanceof ErrorEvent) {
+  //     // A client-side or network error occurred. Handle it accordingly.
+  //     console.error('An error occurred:', error.error.message);
+  //   } else {
+  //     // The backend returned an unsuccessful response code.
+  //     // The response body may contain clues as to what went wrong,
+  //     console.error(
+  //       `Backend returned code ${error.status}, ` +
+  //       `body was: ${error.error}`);
+  //   }
+  //   // return an observable with a user-facing error message
+  //   return throwError(
+  //     'Something bad happened; please try again later.');
+  // }
+
 }

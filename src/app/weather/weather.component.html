@@ -1,10 +1,19 @@
-  <ion-card>
-    
-    <ion-card-header>
-        <ion-card-title><i class="{{currentWeather.icon}}"></i> {{currentWeather.temperature}} &deg;F</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      
-    </ion-card-content>
+<ion-card>
+
+  <ion-card-header>
+    <ion-card-title *ngIf="currentWeather['moon']"><i class="{{currentWeather.moon.icon}}"></i> {{currentWeather.moon.phase}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+
+  </ion-card-content>
 </ion-card>
-  <p *ngFor="let forecast of forecasts">{{forecast.time}} {{forecast.summary}}</p>
+
+<ion-card>
+
+  <ion-card-header>
+    <ion-card-title><i class="{{currentWeather.icon}}"></i> {{currentWeather.temperature}} &deg;F</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+
+  </ion-card-content>
+</ion-card>

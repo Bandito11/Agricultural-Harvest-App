@@ -72,7 +72,16 @@ export interface ICurrentWeather {
     ozone: number; // Dobson units
     sunriseTime: string;
     sunsetTime: string;
-    moonPhase: number;
+    moon: {
+        icon: string;
+        phase: string;
+    };
+    fullMoon?: IPhase & ICalendar;
+}
+
+export interface IPhase {
+    icon: string;
+    phase: string;
 }
 
 export interface IForecast {

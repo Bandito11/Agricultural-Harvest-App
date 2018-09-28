@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, SimpleChanges, Input } from '@angular/core';
 import { ICrop, ICalendar } from '../models';
 import { CropsService } from '../crops.service/crops.service';
 import { cropsAction } from '../common';
@@ -8,20 +8,14 @@ import { cropsAction } from '../common';
   templateUrl: './crops-noproduction.component.html',
   styleUrls: ['./crops-noproduction.component.scss']
 })
-export class CropsNoproductionComponent implements OnInit {
+export class CropsNoproductionComponent implements OnChanges {
+  noProductionCrops: ICrop[] = [];
+  @Input() date: ICalendar;
 
   constructor(private crops: CropsService) { }
-  noProductionCrops: ICrop[] = [];
 
-  ngOnInit() {
-    const currentDate: ICalendar = {
-      day: new Date().getDate(),
-      month: new Date().getMonth(),
-      year: new Date().getFullYear(),
-      weekday: new Date().getDay()
-    };
-    this.getCrops(currentDate.month);
-
+  ngOnChanges(changes: SimpleChanges) {
+    this.getCrops(changes['date'].currentValue.month);
   }
 
   /**

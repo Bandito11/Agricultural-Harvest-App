@@ -1,5 +1,5 @@
 import { ICalendar } from './../models';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, SimpleChanges, Input } from '@angular/core';
 import { ICrop } from '../models';
 import { CropsService } from '../crops.service/crops.service';
 import { cropsAction } from '../common';
@@ -9,19 +9,13 @@ import { cropsAction } from '../common';
   templateUrl: './crops-abundance.component.html',
   styleUrls: ['./crops-abundance.component.scss']
 })
-export class CropsAbundanceComponent implements OnInit {
-
+export class CropsAbundanceComponent implements OnChanges {
+  @Input() date: ICalendar;
   abundantCrops: ICrop[] = [];
   constructor(private crops: CropsService) { }
 
-  ngOnInit() {
-    const currentDate: ICalendar = {
-      day: new Date().getDate(),
-      month: new Date().getMonth(),
-      year: new Date().getFullYear(),
-      weekday: new Date().getDay()
-    };
-    this.getCrops(currentDate.month);
+  ngOnChanges(changes: SimpleChanges) {
+    this.getCrops(changes['date'].currentValue.month);
   }
 
   /**

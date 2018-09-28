@@ -9,11 +9,9 @@ import { throwError } from 'rxjs';
 })
 export class WeatherService {
 
-  host: string;
+  host = `http://localhost:5000/weather`;
 
-  constructor(private httpClient: HttpClient) {
-    this.host = `http://localhost:5000/weather`;
-  }
+  constructor(private httpClient: HttpClient) {  }
 
   getWeather() {
     return this.httpClient.get<IApiResponse<{ current: ICurrentWeather, forecast: IForecast[] }>>(this.host)
@@ -37,5 +35,5 @@ export class WeatherService {
     // return an observable with a user-facing error message
     return throwError(
       'Something bad happened; please try again later.');
-  };
+  }
 }

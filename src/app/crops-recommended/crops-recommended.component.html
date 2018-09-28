@@ -3,7 +3,7 @@
     <ion-card-title>Es bueno sembrar...</ion-card-title>
   </ion-card-header>
   <ion-card-content>
-    <ion-list *ngFor="let crop of inProductionCrops; let i=index">
+    <ion-list lines="none" *ngFor="let crop of inProductionCrops; let i=index">
       <ion-item>
         <i [style.color]="inProductionCrops[i].color" class="{{crop.icon}}"></i>
         <ion-label>{{crop.name}}</ion-label>

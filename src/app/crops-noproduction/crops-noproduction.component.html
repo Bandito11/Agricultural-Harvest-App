@@ -4,7 +4,7 @@
     </ion-card-header>
 
     <ion-card-content>
-      <ion-list *ngFor="let crop of noProductionCrops; let i=index">
+      <ion-list lines="none" *ngFor="let crop of noProductionCrops; let i=index">
         <ion-item>
           <i [style.color]="noProductionCrops[i].color" class="{{crop.icon}}"></i>
           <ion-label>{{crop.name}}</ion-label>

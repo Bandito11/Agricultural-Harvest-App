@@ -1,3 +1,5 @@
+import { ICalendar } from './models';
+
 export const timeout = 1500;
 
 export function getUTCTime(utc) {
