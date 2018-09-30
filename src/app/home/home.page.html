@@ -7,7 +7,6 @@
 </ion-header> -->
 
 <ion-content padding>
-<discussion-embed shortname="myShortName" config="myConfig"></discussion-embed>
   <app-zodiac [date]="date" (zodiacName)="getZodiacName($event)"></app-zodiac>
   <app-tips [zodiac]="zodiac" [phase]="phase"></app-tips>
   <app-weather (phase)="getPhase($event)"></app-weather>
