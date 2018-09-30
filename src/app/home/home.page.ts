@@ -10,9 +10,13 @@ export class HomePage implements OnInit {
   zodiac: string;
   date: ICalendar;
   phase: string;
+  myShortName = 'banditotr';
+  myConfig = {
+    identifier: '/',
+    url: 'https://banditotr.com'
+  };
 
   constructor() { }
-
   ngOnInit() {
     this.date = {
       day: new Date().getDate(),

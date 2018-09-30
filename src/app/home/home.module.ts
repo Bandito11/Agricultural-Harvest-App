@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
@@ -24,7 +24,8 @@ import { ZodiacComponent } from '../zodiac/zodiac.component';
       }
     ])
   ],
-  declarations: [HomePage, WeatherComponent, ZodiacComponent, CropsAbundanceComponent, CropsRecommendedComponent, 
-    CropsNoproductionComponent, TipsComponent]
+  declarations: [HomePage, WeatherComponent, ZodiacComponent, CropsAbundanceComponent, CropsRecommendedComponent,
+    CropsNoproductionComponent, TipsComponent ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class HomePageModule {}
+export class HomePageModule { }
