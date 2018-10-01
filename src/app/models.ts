@@ -84,6 +84,11 @@ export interface IPhase {
     phase: string;
 }
 
+export interface IWeather {
+    current: ICurrentWeather;
+    forecast: IForecast[];
+}
+
 export interface IForecast {
     time: number;
     summary: string;

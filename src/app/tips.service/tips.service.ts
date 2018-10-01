@@ -8,7 +8,6 @@ import { getFileFromAssets } from '../common';
 })
 export class TipsService {
 
-  host = `http://localhost:5000/tips`;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -74,27 +73,13 @@ export class TipsService {
  */
   // getTips(opts: { zodiac: string, phase: string }) {
   //   const options = { params: opts };
-  //   return this.httpClient.get<IApiResponse<string[]>>(this.host, options)
+  //   const host = `http://localhost:5000/tips`;
+  //   return this.httpClient.get<IApiResponse<string[]>>(host, options)
   //     .pipe(
   //       retry(3),
-  //       catchError(this.handleError)
+  //       catchError(handleError)
   //     );
   // }
 
-  // private handleError(error: HttpErrorResponse) {
-  //   if (error.error instanceof ErrorEvent) {
-  //     // A client-side or network error occurred. Handle it accordingly.
-  //     console.error('An error occurred:', error.error.message);
-  //   } else {
-  //     // The backend returned an unsuccessful response code.
-  //     // The response body may contain clues as to what went wrong,
-  //     console.error(
-  //       `Backend returned code ${error.status}, ` +
-  //       `body was: ${error.error}`);
-  //   }
-  //   // return an observable with a user-facing error message
-  //   return throwError(
-  //     'Something bad happened; please try again later.');
-  // }
 
 }

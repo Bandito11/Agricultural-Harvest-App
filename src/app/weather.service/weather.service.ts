@@ -1,36 +1,52 @@
-import { IApiResponse, ICurrentWeather, IForecast } from './../models';
+import { IApiResponse, IWeather } from './../models';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
 import { catchError, retry } from 'rxjs/operators';
+import { Storage } from '@ionic/storage';
 import { throwError } from 'rxjs';
+import { AuthenticateService } from '../authenticate.service/authenticate.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeatherService {
 
-  host = `http://localhost:5000/weather`;
+  constructor(private httpClient: HttpClient, private storage: Storage, private auth: AuthenticateService) { }
 
-  constructor(private httpClient: HttpClient) {  }
-
+  /**
+   * Get the Current Weather
+   */
   getWeather() {
-    return this.httpClient.get<IApiResponse<{ current: ICurrentWeather, forecast: IForecast[] }>>(this.host)
-    .pipe(
-      retry(3),
-      catchError(this.handleError)
-    );
+    const token = sessionStorage.getItem('token');
+    if (!token) {
+      setTimeout(() => this.getWeather(), 3000);
+    }
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+    const options = {
+      headers: headers,
+      params: new HttpParams().set('token', token)
+    };
+    const host = `http://localhost:5000/weather`;
+    return this.httpClient.get<IApiResponse<IWeather>>(host, options)
+      .pipe(
+        retry(3),
+        catchError(this.handleError)
+      );
   }
 
-  private handleError(error: HttpErrorResponse) {
+  handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.
-      console.error('An error occurred:', error.error.message);
+      console.error('Error:', error.error);
+      console.error('Error:', error.message);
     } else {
       // The backend returned an unsuccessful response code.
       // The response body may contain clues as to what went wrong,
       console.error(
         `Backend returned code ${error.status}, ` +
-        `body was: ${error.error}`);
+        `body was: ${error.error.error}`);
     }
     // return an observable with a user-facing error message
     return throwError(
