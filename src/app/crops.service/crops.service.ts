@@ -21,6 +21,7 @@ export class CropsService {
     return new Promise((resolve, reject) => {
       getFileFromAssets('./assets/crops/crops.json')
         .then(data => {
+        if(data)
           crops = <ICrop[]>JSON.parse(data);
           switch (opts.action) {
             case 'abundance':
@@ -83,6 +84,13 @@ export class CropsService {
             error: 'Hubo error extrayendo la lista. Refresca la página y trate de nuevo.'
           };
           reject(response);
+
+        else{
+          reject({
+          success: false, 
+           error:'Couldn\'t find the file!',
+          });
+          }
         });
     });
   }
