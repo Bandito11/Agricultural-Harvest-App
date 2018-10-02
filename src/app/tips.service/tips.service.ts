@@ -8,7 +8,6 @@ import { getFileFromAssets } from '../common';
 })
 export class TipsService {
 
-
   constructor(private httpClient: HttpClient) { }
 
   /**
@@ -26,6 +25,7 @@ export class TipsService {
     return new Promise((resolve, reject) => {
       getFileFromAssets('./assets/tips/tips.json')
         .then(data => {
+         if(data){
           const tips = <ITips[]>JSON.parse(data);
           try {
             tips.map(tip => {
@@ -62,6 +62,13 @@ export class TipsService {
             error: 'Hubo error extrayendo la lista. Refresca la página y trate de nuevo.'
           };
           reject(response);
+         }
+         else{
+          reject({
+            success: false, 
+            error:'Couldn\'t find the file!'
+          });
+           }
         });
     });
   }
@@ -72,6 +79,7 @@ export class TipsService {
  * From Web Api
  */
   // getTips(opts: { zodiac: string, phase: string }) {
+  //   const host = `http://localhost:5000/tips`;
   //   const options = { params: opts };
   //   const host = `http://localhost:5000/tips`;
   //   return this.httpClient.get<IApiResponse<string[]>>(host, options)
