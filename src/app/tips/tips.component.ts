@@ -9,7 +9,7 @@ import { Component, OnChanges, Input, SimpleChanges } from '@angular/core';
 export class TipsComponent implements OnChanges {
   @Input() zodiac: string;
   @Input() phase: string;
-  messages: string[];
+  messages: string[] = [];
   private zodiacName: string;
   private moonPhase: string;
   constructor(private tips: TipsService) { }
@@ -26,7 +26,11 @@ export class TipsComponent implements OnChanges {
       if (this.moonPhase && this.zodiacName) {
         const response = await this.tips.getTips({ zodiac: this.zodiacName, phase: this.moonPhase });
         if (response.success) {
-          this.messages = [...response.data];
+          if (response.error) {
+            this.messages = [...this.messages, response.error];
+          } else {
+            this.messages = [...this.messages, ...response.data];
+          }
         } else {
           console.error(response.error);
         }

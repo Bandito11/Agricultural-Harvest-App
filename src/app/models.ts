@@ -82,6 +82,8 @@ export interface ICurrentWeather {
 export interface IPhase {
     icon: string;
     phase: string;
+    newMoon: string;
+    fullMoon: string;
 }
 
 export interface IWeather {

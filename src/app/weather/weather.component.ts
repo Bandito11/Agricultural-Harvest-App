@@ -1,3 +1,4 @@
+import { IPhase } from './../models';
 import { tokenErrors } from './../common';
 import { AuthenticateService } from './../authenticate.service/authenticate.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
@@ -13,11 +14,31 @@ export class WeatherComponent implements OnInit {
   currentWeather = <ICurrentWeather>{};
   forecasts: IForecast[] = [];
   @Output() phase = new EventEmitter<string>();
-
+  props: string[] = [];
+  moonPhase: IPhase = {
+    icon: '',
+    phase: '',
+    newMoon: '',
+    fullMoon: ''
+  };
   constructor(private weather: WeatherService, private auth: AuthenticateService) { }
 
   ngOnInit() {
     this.getWeather();
+    this.getMoonPhases();
+  }
+
+  getMoonPhases() {
+    this.weather.getFullMoon().subscribe(response => {
+      if (response.success) {
+        this.moonPhase = {
+          ...this.moonPhase,
+          ...response.data
+        };
+      }
+    },
+      error => console.error(error)
+    );
   }
 
 
@@ -27,6 +48,10 @@ export class WeatherComponent implements OnInit {
         this.currentWeather = { ...response.data.current };
         this.forecasts = [...response.data.forecast];
         this.phase.emit(response.data.current.moon.phase);
+        this.moonPhase = {
+          ...this.moonPhase,
+          ...response.data.current.moon
+        };
       } else {
         if (response.error === 'TokenExpiredError') {
           this.auth.authenticate();
@@ -36,6 +61,9 @@ export class WeatherComponent implements OnInit {
         }
       }
     },
-      error => console.error(error));
+      error => console.error(error)
+    );
   }
 }
+
+

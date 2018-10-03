@@ -1,0 +1,9 @@
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ripple" size="4" *ngFor="let month of months; let i = index" [style.color]="this.chosen == month ? '#fff' : ''" [style.background-color]="this.chosen == month ? '#ffcccc' : '' " (click)="choseDay(i)">
+        <p text-center>
+          {{month}}
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>

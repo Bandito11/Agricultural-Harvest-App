@@ -1,3 +1,4 @@
+import { CalendarComponent } from './../calendar/calendar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
@@ -24,7 +25,7 @@ import { ZodiacComponent } from '../zodiac/zodiac.component';
       }
     ])
   ],
-  declarations: [HomePage, WeatherComponent, ZodiacComponent, CropsAbundanceComponent, CropsRecommendedComponent,
+  declarations: [HomePage, WeatherComponent, CalendarComponent, ZodiacComponent, CropsAbundanceComponent, CropsRecommendedComponent,
     CropsNoproductionComponent, TipsComponent]
 })
 export class HomePageModule { }

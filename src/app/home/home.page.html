@@ -7,9 +7,10 @@
 </ion-header> -->
 
 <ion-content padding>
-  <app-zodiac [date]="date" (zodiacName)="getZodiacName($event)"></app-zodiac>
+  <app-calendar (month)="getCurrentMonth($event)"></app-calendar>
+  <!-- <app-zodiac [date]="date" (zodiacName)="getZodiacName($event)"></app-zodiac>
   <app-tips [zodiac]="zodiac" [phase]="phase"></app-tips>
-  <app-weather (phase)="getPhase($event)"></app-weather>
+  <app-weather (phase)="getPhase($event)"></app-weather> -->
   <crops-abundance [date]="date"></crops-abundance>
   <crops-noproduction [date]="date"></crops-noproduction>
   <crops-recommended [date]="date"></crops-recommended>

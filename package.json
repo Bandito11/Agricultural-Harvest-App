@@ -1,8 +1,8 @@
 {
   "name": "anemone",
-  "version": "0.0.2",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "version": "0.0.3",
+  "author": "Esteban Morales",
+  "homepage": "https://www.banditotr.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -65,7 +65,7 @@
     "tslint": "~5.11.0",
     "typescript": "~2.9.2"
   },
-  "description": "An Ionic project",
+  "description": "A project for enthusiasts about agriculture.",
   "cordova": {
     "plugins": {
       "cordova-plugin-file": {},

@@ -11,6 +11,7 @@ export class HomePage implements OnInit {
   zodiac: string;
   date: ICalendar;
   phase: string;
+  currentMonth: ICalendar;
 
   constructor(private auth: AuthenticateService) { }
 
@@ -25,6 +26,7 @@ export class HomePage implements OnInit {
       this.auth.authenticate();
     }
     // Use this expired token to test the Auth Module
+    // tslint:disable-next-line:max-line-length
     // sessionStorage.setItem('token','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHAiOiJBbmVtb25lOyIsImlhdCI6MTUzODM3MzY4NSwiZXhwIjoxNTM4Mzc1MTI1fQ.zbpJ7g-rrjaW2mjymm2keLtEYRBs8HWN0qQ7sp9ZfOo')
   }
 
@@ -34,5 +36,12 @@ export class HomePage implements OnInit {
 
   getZodiacName(name: string) {
     this.zodiac = name;
+  }
+
+  getCurrentMonth(month: number) {
+    this.date = {
+      ...this.currentMonth,
+      month: month
+    };
   }
 }

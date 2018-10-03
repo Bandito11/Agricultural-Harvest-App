@@ -36,6 +36,26 @@ export class WeatherService {
       );
   }
 
+  getFullMoon() {
+    const token = sessionStorage.getItem('token');
+    if (!token) {
+      setTimeout(() => this.getFullMoon(), 3000);
+    }
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+    const options = {
+      headers: headers,
+      params: new HttpParams().set('token', token)
+    };
+    const host = `http://localhost:5000/moonphase`;
+    return this.httpClient.get<IApiResponse<{newMoon: string, fullMoon: string}>>(host, options)
+      .pipe(
+        retry(3),
+        catchError(this.handleError)
+      );
+  }
+
   handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.

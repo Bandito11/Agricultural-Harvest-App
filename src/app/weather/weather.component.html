@@ -14,6 +14,10 @@
     <ion-card-title><i class="{{currentWeather.icon}}"></i> {{currentWeather.temperature}} &deg;F</ion-card-title>
   </ion-card-header>
   <ion-card-content>
-
+<ion-list lines="none">
+  <ion-item *ngFor="let prop of props">
+    {{prop}} {{currentWeather[prop]}}
+  </ion-item>
+</ion-list>
   </ion-card-content>
 </ion-card>

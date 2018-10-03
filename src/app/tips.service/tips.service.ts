@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import {  IApiResponse, ITips } from '../models';
-import { HttpClient } from '@angular/common/http';
+import { IApiResponse, ITips } from '../models';
 import { getFileFromAssets } from '../common';
 
 @Injectable({
@@ -8,7 +7,7 @@ import { getFileFromAssets } from '../common';
 })
 export class TipsService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor() { }
 
   /**
   * Get tips based on zodiac and moonphase
@@ -25,36 +24,43 @@ export class TipsService {
     return new Promise((resolve, reject) => {
       getFileFromAssets('./assets/tips/tips.json')
         .then(data => {
-         if(data){
-          const tips = <ITips[]>JSON.parse(data);
-          try {
-            tips.map(tip => {
-              if (tip.zodiac === opts.zodiac && tip.phase === opts.phase) {
-                response = {
-                  ...response,
-                  data: [...response.data, tip.message]
-                };
-              }
-            });
-          } catch (error) {
-            response = {
-              ...response,
-              error: 'Hubo error extrayendo del API.'
-            };
-            reject(response);
-          }
-          if (response.data.length > 0) {
-            response = {
-              ...response,
-              success: true
-            };
+          if (data) {
+            const tips = <ITips[]>JSON.parse(data);
+            try {
+              tips.map(tip => {
+                if (tip.zodiac === opts.zodiac && tip.phase === opts.phase) {
+                  response = {
+                    ...response,
+                    data: [...response.data, tip.message]
+                  };
+                }
+              });
+            } catch (error) {
+              response = {
+                ...response,
+                error: 'Hubo error extrayendo del API.'
+              };
+              reject(response);
+            }
+            if (response.data.length > 0) {
+              response = {
+                ...response,
+                success: true
+              };
+            } else {
+              response = {
+                ...response,
+                success: true,
+                error: 'No hay recomendaciones disponible para este signo zodiacal y/o fase lunar.'
+              };
+            }
+            resolve(response);
           } else {
-            response = {
-              ...response,
-              error: 'No hay recomendaciones disponible para este signo zodiacal y/o fase lunar.'
-            };
+            reject({
+              success: false,
+              error: 'Couldn\'t find the file!'
+            });
           }
-          resolve(response);
         })
         .catch(_ => {
           response = {
@@ -62,13 +68,6 @@ export class TipsService {
             error: 'Hubo error extrayendo la lista. Refresca la página y trate de nuevo.'
           };
           reject(response);
-         }
-         else{
-          reject({
-            success: false, 
-            error:'Couldn\'t find the file!'
-          });
-           }
         });
     });
   }
