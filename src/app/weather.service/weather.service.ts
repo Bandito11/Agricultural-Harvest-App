@@ -49,7 +49,7 @@ export class WeatherService {
       params: new HttpParams().set('token', token)
     };
     const host = `http://localhost:5000/moonphase`;
-    return this.httpClient.get<IApiResponse<{newMoon: string, fullMoon: string}>>(host, options)
+    return this.httpClient.get<IApiResponse<{ newMoon: string, fullMoon: string }>>(host, options)
       .pipe(
         retry(3),
         catchError(this.handleError)
