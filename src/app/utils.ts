@@ -1,8 +1,22 @@
 import { throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
-import { ICalendar } from './models';
 
 export const timeout = 1500;
+
+export const months = [
+    'Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+    'Septiembre',
+    'Octubre',
+    'Noviembre',
+    'Diciembre'
+  ];
 
 export function getUTCTime(utc) {
     const date = new Date(0);

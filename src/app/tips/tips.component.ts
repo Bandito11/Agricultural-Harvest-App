@@ -7,12 +7,14 @@ import { Component, OnChanges, Input, SimpleChanges } from '@angular/core';
   styleUrls: ['./tips.component.scss']
 })
 export class TipsComponent implements OnChanges {
-  @Input() zodiac: string;
-  @Input() phase: string;
+  @Input()
+  zodiac: string;
+  @Input()
+  phase: string;
   messages: string[] = [];
   private zodiacName: string;
   private moonPhase: string;
-  constructor(private tips: TipsService) { }
+  constructor(private tips: TipsService) {}
 
   async ngOnChanges(changes: SimpleChanges) {
     // Get messages from file
@@ -24,10 +26,10 @@ export class TipsComponent implements OnChanges {
     }
     try {
       if (this.moonPhase && this.zodiacName) {
-        const response = await this.tips.getTips({ zodiac: this.zodiacName, phase: this.moonPhase });
+        const response = await this.tips.getTips({ zodiac: this.zodiacName.toLowerCase(), phase: this.moonPhase.toLowerCase() });
         if (response.success) {
           if (response.error) {
-            this.messages = [...this.messages, response.error];
+            this.messages = [...this.messages];
           } else {
             this.messages = [...this.messages, ...response.data];
           }

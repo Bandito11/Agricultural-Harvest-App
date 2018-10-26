@@ -1,23 +1,24 @@
-<ion-card>
+<div *ngIf="currentWeather['moon']">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><i class="{{moonPhase.icon}}"></i> {{moonPhase.phase}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>La próxima nueva luna es: {{moonPhase.newMoon}}</p>
+      <p>La próxima luna llena es: {{moonPhase.fullMoon}}</p>
+    </ion-card-content>
+  </ion-card>
+</div>
 
+<ion-card>
   <ion-card-header>
-    <ion-card-title *ngIf="currentWeather['moon']"><i class="{{currentWeather.moon.icon}}"></i> {{currentWeather.moon.phase}}</ion-card-title>
+    <div id="weather-header">
+      <i class="{{currentWeather.icon}}"></i>
+      <ion-card-title>{{currentWeather.temperature}} &deg;F</ion-card-title>
+    </div>
+    <h6>San Juan, Puerto Rico</h6>
   </ion-card-header>
   <ion-card-content>
-
-  </ion-card-content>
-</ion-card>
-
-<ion-card>
-
-  <ion-card-header>
-    <ion-card-title><i class="{{currentWeather.icon}}"></i> {{currentWeather.temperature}} &deg;F</ion-card-title>
-  </ion-card-header>
-  <ion-card-content>
-<ion-list lines="none">
-  <ion-item *ngFor="let prop of props">
-    {{prop}} {{currentWeather[prop]}}
-  </ion-item>
-</ion-list>
+    <p><span>Pronóstico de clima es: </span>{{currentWeather.summary}}</p>
   </ion-card-content>
 </ion-card>

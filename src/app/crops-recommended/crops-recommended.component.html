@@ -3,11 +3,23 @@
     <ion-card-title>Es bueno sembrar...</ion-card-title>
   </ion-card-header>
   <ion-card-content>
-    <ion-list lines="none" *ngFor="let crop of inProductionCrops; let i=index">
-      <ion-item>
-        <i [style.color]="inProductionCrops[i].color" class="{{crop.icon}}"></i>
+    <ion-list lines="none">
+      <ion-item *ngFor="let crop of pageOne; let i=index">
+        <i [style.color]="pageOne[i].color" class="{{crop.icon}}"></i>
         <ion-label>{{crop.name}}</ion-label>
       </ion-item>
+      <div *ngIf="showAll">
+        <ion-item *ngFor="let crop of pageTwo; let i=index">
+          <i [style.color]="pageTwo[i].color" class="{{crop.icon}}"></i>
+          <ion-label>{{crop.name}}</ion-label>
+        </ion-item>
+      </div>
     </ion-list>
+    <div *ngIf="!showAll">
+    <ion-button fill="clear" (click)="showAllCrops()">Enseñar más</ion-button>
+  </div>
+  <div *ngIf="showAll">
+    <ion-button fill="clear" (click)="showAllCrops()">Enseñar menos</ion-button>
+  </div>
   </ion-card-content>
 </ion-card>

@@ -1,5 +1,5 @@
 import { IPhase } from './../models';
-import { tokenErrors } from './../common';
+import { tokenErrors } from '../utils';
 import { AuthenticateService } from './../authenticate.service/authenticate.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { IForecast, ICurrentWeather } from '../models';
@@ -53,8 +53,9 @@ export class WeatherComponent implements OnInit {
           ...response.data.current.moon
         };
       } else {
-        if (response.error === 'TokenExpiredError') {
+        if (response.error === tokenErrors.TokenExpiredError) {
           this.auth.authenticate();
+          this.getMoonPhases();
           this.getWeather();
         } else {
           console.error(response.error + '\n' + response.data);

@@ -2,7 +2,7 @@ import { IApiResponse } from './../models';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, retry } from 'rxjs/operators';
-import { handleError, getFileFromAssets } from '../common';
+import { handleError, getFileFromAssets } from '../utils';
 
 @Injectable({
   providedIn: 'root'
