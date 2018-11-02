@@ -1,0 +1,6 @@
+{
+  "appId": "xyz.yucahi.anemone",
+  "appName": "anemone",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}

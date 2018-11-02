@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Yucahi</string>
+    <string name="title_activity_main">Yucahi</string>
+    <string name="package_name">xyz.yucahi.anemone</string>
+    <string name="fileprovider_authority">xyz.yucahi.anemone.fileprovider</string>
+    <string name="custom_url_scheme">xyz.yucahi.anemone</string>
+</resources>
